@@ -30,17 +30,17 @@
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch("https://sample-qoyjkse8q-rohitshrivastava029-gmailcoms-projects.vercel.app/", {
+                const response = await fetch("https://sample-5ps2eeub4-rohitshrivastava029-gmailcoms-projects.vercel.app", { // Vercel backend URL here
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(data)
                 });
 
                 if (response.ok) {
-                    console.log(response)
+                    console.log("Form submitted successfully");
                     window.location.href = "signup.html"; // Redirect to success page
                 } else {
-                    console.log(response)
+                    console.log("Form submission failed", response);
                     alert("Form submission failed!");
                 }
             } catch (error) {
